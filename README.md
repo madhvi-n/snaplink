@@ -1,7 +1,7 @@
-# PyShortly - A URL Shortener
+# SnapLink - A URL Shortener
 
 ## 🚀 Overview
-PyShortly is a simple yet powerful URL shortener built with **Python (Flask)** and **HTMX/React** for the frontend. It allows users to shorten long URLs, track visits, and even generate QR codes for quick access. The app is deployed on **Render** for seamless cloud hosting.
+SnapLink is a simple yet powerful URL shortener built with **Python (Flask)** and **HTMX/React** for the frontend. It allows users to shorten long URLs, track visits, and even generate QR codes for quick access. The app is deployed on **Render** for seamless cloud hosting.
 
 ## ✨ Features
 - 🔗 **URL Shortening** – Convert long URLs into short, easy-to-share links.
@@ -29,8 +29,8 @@ PyShortly is a simple yet powerful URL shortener built with **Python (Flask)** a
 ## 📦 Installation & Setup
 ### **1. Clone the Repository**
 ```sh
-git clone https://github.com/yourusername/pyshortly.git
-cd pyshortly
+git clone https://github.com/madhvi-n/snaplink.git
+cd snaplink
 ```
 
 ### **2. Create a Virtual Environment & Install Dependencies**
@@ -62,7 +62,7 @@ curl -X POST "https://yourdomain.com/shorten" -d "url=https://example.com"
 Response:
 ```json
 {
-  "short_url": "https://shrinkr.ly/abc123"
+  "short_url": "https://snaplink.ly/abc123"
 }
 ```
 
