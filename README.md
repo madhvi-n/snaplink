@@ -11,12 +11,10 @@ SnapLink is a simple yet powerful URL shortener built with **Python (Django)** a
 ## ✨ Features
 
 - 🔗 **URL Shortening** – Convert long URLs into short, easy-to-share links.
-- 🎨 **Custom Short Links** – Users can choose custom aliases for their links.
 - 📊 **Click Tracking** – See how many times a link has been accessed.
 - ⏳ **Expiration Dates** – Set an expiry time for temporary links.
-- 🖥 **API Support** – Shorten URLs programmatically via a REST API.
-- 📸 **QR Code Generation** – Generate QR codes for each shortened URL.
-- 🚀 **Fast & Lightweight** – Uses HTMX/React for a snappy frontend experience.
+- 📸 **QR Code Generation** – Generate QR codes for each shortened URL (To Do).
+- 🚀 **Fast & Lightweight** – Uses HTMX/React for a snappy frontend experience (To Do).
 
 ## 🛠 Tech Stack
 
