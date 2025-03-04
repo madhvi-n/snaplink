@@ -6,7 +6,8 @@ from django.shortcuts import redirect, get_object_or_404
 from django.utils import timezone
 from django.conf import settings
 from .models import URL, UrlVisit
-from .serializers import URLSerializer
+from .serializers import URLSerializer, URLReadOnlySerializer
+from .mixins import MultiSerializerViewSetMixin
 
 
 class URLRedirectAPIView(APIView):
@@ -40,15 +41,20 @@ class URLRedirectAPIView(APIView):
         return redirect(url_instance.original_url)
 
 
-class URLViewSet(viewsets.ModelViewSet):
+class URLViewSet(MultiSerializerViewSetMixin, viewsets.ModelViewSet):
     queryset = URL.objects.all()
     serializer_class = URLSerializer
+    serializer_action_classes = {
+        'create': URLSerializer,
+        'list': URLReadOnlySerializer,
+        'detail': URLReadOnlySerializer 
+    }
 
-    def list(self, request, *args, **kwargs):
-        return Response(
-            {"detail": "Listing URLs is not allowed."}, 
-            status=status.HTTP_403_FORBIDDEN
-        )
+    # def list(self, request, *args, **kwargs):
+    #     return Response(
+    #         {"detail": "Listing URLs is not allowed."}, 
+    #         status=status.HTTP_403_FORBIDDEN
+    #     )
 
     def update(self, request, *args, **kwargs):
         return Response(

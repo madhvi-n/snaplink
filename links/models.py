@@ -41,7 +41,7 @@ class URL(models.Model):
 
 class UrlVisit(models.Model):
     url = models.ForeignKey(URL, on_delete=models.CASCADE, related_name="visits")
-    date = models.DateField(default=timezone.now())
+    date = models.DateField(default=timezone.now)
     count = models.PositiveIntegerField(default=0)
     ip_address = models.GenericIPAddressField()
 
