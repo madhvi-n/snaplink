@@ -35,10 +35,10 @@ SnapLink is a simple yet powerful URL shortener built with **Python (Django)** a
 
 1. Clone the Repository
 
-  ```sh
-  git clone https://github.com/madhvi-n/snaplink.git
-  cd snaplink
-  ```
+    ```sh
+    git clone https://github.com/madhvi-n/snaplink.git
+    cd snaplink
+    ```
 
 2. Set up a virtual environment
 
