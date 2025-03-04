@@ -149,6 +149,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:8000',
-    'https://snaplink-production.up.railway.app'
+    'http://localhost:5143',
+    'https://snaplink-frontend.up.railway.app'
 ]
