@@ -4,9 +4,9 @@
 [![Python](https://img.shields.io/badge/Python-3.11-blue)](https://www.python.org/)
 [![Django](https://img.shields.io/badge/Django-5.1-brightgreen?style=flat&logo=django&logoColor=white)](https://www.djangoproject.com/)
 [![Django Rest Framework](https://img.shields.io/badge/Django_Rest_Framework-3.15-red)](https://www.django-rest-framework.org/)
-[![Angular](https://img.shields.io/badge/Angular-19-blueviolet)](https://angular.io/)
+[![Angular](https://img.shields.io/badge/React-19-blueviolet)](https://react.dev/)
 
-SnapLink is a simple yet powerful URL shortener built with **Python (Django)** and **HTMX/React** for the frontend. It allows users to shorten long URLs, track visits, and even generate QR codes for quick access.
+SnapLink is a simple yet powerful URL shortener built with **Python (Django)** and **React** for the frontend. It allows users to shorten long URLs, track visits, and even generate QR codes for quick access.
 
 ## ✨ Features
 
@@ -26,7 +26,7 @@ SnapLink is a simple yet powerful URL shortener built with **Python (Django)** a
 
 ### **Frontend:**
 
-- **HTMX** (for lightweight dynamic UI) or **React** (for a more interactive experience)
+- React
 - Tailwind CSS (for styling)
 
 ## 📦 Installation & Setup
@@ -71,6 +71,20 @@ SnapLink is a simple yet powerful URL shortener built with **Python (Django)** a
     ```
 
     Access the application at: <http://127.0.0.1:8000>
+
+## Frontend
+
+1. Install dependencies
+
+    ```bash
+        npm install
+    ```
+
+2. Run the Development Server
+
+    ```bash
+        npm run dev
+    ```
 
 ## 📝 API Documentation
 
