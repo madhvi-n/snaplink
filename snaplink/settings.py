@@ -153,6 +153,7 @@ from corsheaders.defaults import default_headers
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
     "https://snaplink-production.up.railway.app",
+    "https://madhvi-n.github.io",
 ]
 
 CORS_ALLOW_CREDENTIALS = True
