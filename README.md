@@ -39,6 +39,12 @@ SnapLink is a **modern, scalable URL shortener** built with **Django (Python) an
 - 🔜 CI/CD Pipelines with GitHub Actions (Planned)
 - 🔜 Error Monitoring with Sentry (Planned)
 
+## 📸 Screenshots
+
+![SnapLink Home](screenshots/image01.png?raw=true "SnapLink Home")
+
+![SnapLink Shorten Url](screenshots/image02.png?raw=true "SnapLink Shorten Url")
+
 
 ## 🛠 Tech Stack
 
