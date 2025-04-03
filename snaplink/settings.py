@@ -55,9 +55,11 @@ INSTALLED_APPS = [
     "django.contrib.sitemaps",
     "corsheaders",
     "rest_framework",
+    "rest_framework_simplejwt",
     "drf_yasg",
     "django_extensions",
-    "links"
+    "links",
+    "profiles",
 ]
 
 MIDDLEWARE = [
@@ -98,11 +100,40 @@ WSGI_APPLICATION = "snaplink.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": os.getenv("DB_NAME"),
+        "USER": os.getenv("DB_USER"),
+        "PASSWORD": os.getenv("DB_PASSWORD"),
+        "HOST": "127.0.0.1",
+        "PORT": "5432",
     }
 }
 
+CACHES = {
+    "default": {
+        "BACKEND": "django.core.cache.backends.redis.RedisCache",
+        "LOCATION": os.getenv("REDIS_URL"),
+    }
+}
+
+CACHE_TIMEOUT = os.getenv("CACHE_TIMEOUT", 3600)
+
+REST_FRAMEWORK = {
+    "DEFAULT_AUTHENTICATION_CLASSES": [
+        # 'rest_framework.authentication.TokenAuthentication',
+        "rest_framework_simplejwt.authentication.JWTAuthentication"
+    ],
+    "DEFAULT_THROTTLE_CLASSES": [
+        "rest_framework.throttling.UserRateThrottle",  # Limits per user
+        "rest_framework.throttling.AnonRateThrottle",  # Limits for unauthenticated users
+    ],
+    "DEFAULT_THROTTLE_RATES": {
+        "user": "10/minute",  # Authenticated users: 10 requests per minute
+        "anon": "5/minute",  # Anonymous users: 5 requests per minute
+        "create_url": "3/minute",  # Only 3 URL creations per minute
+        "delete_url": "3/minute",
+    },
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
@@ -141,7 +172,7 @@ SITE_ID = 1
 
 STATIC_URL = "static/"
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field

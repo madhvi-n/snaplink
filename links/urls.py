@@ -1,11 +1,7 @@
-from django.urls import path, include
-from rest_framework.routers import DefaultRouter
-from links.views import URLViewSet
-
-
-router = DefaultRouter()
-router.register(r'urls', URLViewSet, basename="urls")
+from django.urls import path
+from .views import URLCreateView, URLDeleteView
 
 urlpatterns = [
-    path('', include(router.urls)),
+    path("urls/", URLCreateView.as_view(), name="url-create"),
+    path("urls/<int:pk>/", URLDeleteView.as_view(), name="url-delete"),
 ]
