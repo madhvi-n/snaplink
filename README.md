@@ -122,7 +122,7 @@ SnapLink is a **modern, scalable URL shortener** built with **Django (Python) an
     Create a .env file in the frontend root and add:
 
     ```sh
-    VITE_API_URL=http://localhost:8000/api
+    VITE_API_URL=http://localhost:8000/api/v1
     ```
 
 4. Start the development server
