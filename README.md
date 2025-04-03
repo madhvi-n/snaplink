@@ -158,12 +158,23 @@ DB_PASSWORD=123456
 - CI/CD Pipelines with GitHub Actions
 - Production Database Setup
 
-🛤 Roadmap & Future Features
-- [ ] Custom Vanity URLs
-- [ ] Geolocation & Device Analytics
-- [ ] Dockerized Deployment
-- [ ] Error Monitoring with Sentry
-- [ ] Cloud-based Storage for Logs
+# 🛤 Roadmap & Future Features
+### Completed Features
+- ✅ Core URL Shortening (short links)
+- ✅ Click Tracking (monitor total clicks per URL)
+- ✅ Expiration & One-Time Use Links
+- ✅ JWT-Based Authentication (access_token & refresh_token)
+- ✅ User Registration & Login
+- ✅ PostgreSQL Database Integration
+- ✅ Rate Limiting for API security
+
+### Upcoming Features
+- ⬜ Custom Vanity URLs (personalized short links)
+- ⬜ Geolocation & Device Tracking
+- ⬜ User Dashboard for managing URLs
+- ⬜ Dockerized Deployment
+- ⬜ CI/CD Pipelines with GitHub Actions
+- ⬜ Error Monitoring with Sentry
 
 
 ### 🎉 Happy Coding! 🚀
