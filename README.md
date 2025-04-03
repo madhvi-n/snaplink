@@ -10,29 +10,29 @@ SnapLink is a **modern, scalable URL shortener** built with **Django (Python) an
 
 ## ✨ Features
 
-🔗 Core URL Shortening
+### 🔗 Core URL Shortening
 - Convert long URLs into short, shareable links
 - Support for custom vanity URLs (Planned)
 
-📊 Analytics & Tracking
+### 📊 Analytics & Tracking
 - Click Tracking – Monitor total clicks per short URL
 - Daily Unique Visitors – Track users based on IP
 - Geolocation & Device Data (Future Feature)
 
-⏳ Expiration & One-Time Use
+### ⏳ Expiration & One-Time Use
 - Set Expiration – Define a custom expiry date for short links
 - One-Time Use Links – Auto-delete after first visit
 
-🔒 User Authentication & Authorization
+### 🔒 User Authentication & Authorization
 - JWT-Based Authentication with access_token & refresh_token
 - User Registration & Login
 - Personalized Dashboard – Users can manage their URLs
 
-⚡ Performance & Caching
+### ⚡ Performance & Caching
 - Django Cache (Redis) for fast URL redirection
 - Database Indexing & Optimization for efficient queries
 
-🚀 DevOps & Scalability
+### 🚀 DevOps & Scalability
 - ✅ PostgreSQL Database Integration
 - ✅ Rate Limiting for API security (Django Rest Framework)
 - 🔜 Dockerized Deployment (Planned)
